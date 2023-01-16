@@ -19,7 +19,7 @@ app.use(express.static("public"));
 mongoose.set('strictQuery', true);
 
 //code update
-mongoose.connect("mongodb+srv://alexveb:Linageorge1!@cluster0.p8cqmqg.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://username:password@cluster0.p8cqmqg.mongodb.net/todolistDB");
 
 const itemsSchema = {
   name: String
