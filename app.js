@@ -19,7 +19,7 @@ app.use(express.static("public"));
 mongoose.set('strictQuery', true);
 
 //code update
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb+srv://alexveb:Linageorge1!@cluster0.p8cqmqg.mongodb.net/todolistDB");
 
 const itemsSchema = {
   name: String
@@ -144,6 +144,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
